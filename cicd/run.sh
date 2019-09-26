@@ -8,7 +8,6 @@ log='/usr/local/jay/go-agent-19.8.0/logs/nohup.out'
 startup(){
   nohup java -jar $args $app > $log &
   echo "$app run success"
-  return 0
   #tail -f nohup.out
 }
 
@@ -31,7 +30,7 @@ if [ $cmd == 'restart' ]; then
       sleep 2
       kill -9 $pid
   fi
-  startup
+  #startup
 fi
 
 if [ $cmd == 'stop' ]; then
