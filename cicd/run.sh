@@ -7,6 +7,7 @@ pid=`ps -ef|grep java|grep $app|awk '{print $2}'`
 startup(){
   #nohup java -jar $args $app &	
   java -jar $args $app &
+  echo "$app run success"
   #tail -f nohup.out
 }
 
