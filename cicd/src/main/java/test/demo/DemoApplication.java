@@ -16,6 +16,6 @@ public class DemoApplication {
 
 	@RequestMapping(value = "index",method = RequestMethod.GET)
 	public String hi() {
-		return "hello w";
+		return "hello";
 	}
 }
