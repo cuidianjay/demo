@@ -31,7 +31,7 @@ if [ $cmd == 'restart' ]; then
       sleep 2
       kill -9 $pid
   fi
-  startup
+  #startup
 fi
 
 if [ $cmd == 'stop' ]; then
