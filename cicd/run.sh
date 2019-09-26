@@ -8,6 +8,7 @@ log='/usr/local/jay/go-agent-19.8.0/logs/nohup.out'
 startup(){
   nohup java -jar $args $app > $log &
   echo "$app run success"
+  exit
   #tail -f nohup.out
 }
 
