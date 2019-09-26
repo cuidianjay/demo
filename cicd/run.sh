@@ -46,3 +46,5 @@ if [ $cmd == 'stop' ]; then
   echo "$app is stopped"
   exit
 fi
+
+exit 0
