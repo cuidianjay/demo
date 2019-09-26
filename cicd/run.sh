@@ -22,6 +22,7 @@ if [ $cmd == 'start' ]; then
   else
     echo "$app is running! pid=$pid"
   fi
+  exit
 fi
 
 if [ $cmd == 'restart' ]; then
@@ -32,6 +33,7 @@ if [ $cmd == 'restart' ]; then
       kill -9 $pid
   fi
   startup
+  exit
 fi
 
 if [ $cmd == 'stop' ]; then
@@ -41,4 +43,5 @@ if [ $cmd == 'stop' ]; then
     kill -9 $pid
   fi
   echo "$app is stopped"
+  exit
 fi
