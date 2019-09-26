@@ -1,6 +1,6 @@
 #!/bin/bash
 app='cicd-0.0.1-SNAPSHOT.jar'
-args=
+args='-Dspring.profiles.active=test'
 cmd=$1
 pid=`ps -ef|grep java|grep $app|awk '{print $2}'`
 
