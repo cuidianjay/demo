@@ -6,9 +6,7 @@ pid=`ps -ef|grep java|grep $app|awk '{print $2}'`
 log='/usr/local/jay/go-agent-19.8.0/logs/nohup.out'
 
 startup(){
-  nohup java -jar $args $app > $log &
-  echo "$app run success"
-  printf "success"
+  nohup java -jar $args $app > /dev/null 2>&1 &
   #tail -f nohup.out
 }
 
@@ -31,7 +29,7 @@ if [ $cmd == 'restart' ]; then
       sleep 2
       kill -9 $pid
   fi
-  #startup
+  startup
 fi
 
 if [ $cmd == 'stop' ]; then
