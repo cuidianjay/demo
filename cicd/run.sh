@@ -1,5 +1,5 @@
 #!/bin/bash
-app='cicd.jar'
+app='cicd-0.0.1-SNAPSHOT.jar'
 args=
 cmd=$1
 pid=`ps -ef|grep java|grep $app|awk '{print $2}'`
