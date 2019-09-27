@@ -3,7 +3,7 @@ app='cicd-0.0.1-SNAPSHOT.jar'
 args='-Dspring.profiles.active=test'
 cmd=$1
 pid=`ps -ef|grep java|grep $app|awk '{print $2}'`
-log='logs/log_info.log'
+log='/usr/local/jay/go-agent-19.8.0/logs/app/log_info.log'
 
 startup(){
   nohup java -jar $args $app > /dev/null 2>&1 &
